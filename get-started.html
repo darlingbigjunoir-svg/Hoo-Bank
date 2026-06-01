@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HooBank – Get Started</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/get-started.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="gs-body">
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon"><i class="fas fa-circle-notch"></i></span>
+        <span class="logo-text">HooBank</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html"     class="nav-link">Home</a>
+        <a href="about.html"     class="nav-link">About Us</a>
+        <a href="features.html"  class="nav-link">Features</a>
+        <a href="solution.html"  class="nav-link">Solution</a>
+      </nav>
+      <a href="get-started.html" class="btn-primary gs-nav-cta">
+        Open Account <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN LAYOUT
+  ============================================================ -->
+  <main class="gs-main">
+
+    <!-- ── LEFT PANEL (branding / trust signals) ── -->
+    <aside class="gs-panel">
+      <div class="gs-panel-inner">
+
+        <!-- Logo -->
+        <a href="index.html" class="gs-panel-logo">
+          <span class="logo-icon"><i class="fas fa-circle-notch"></i></span>
+          <span class="logo-text">HooBank</span>
+        </a>
+
+        <!-- Headline -->
+        <div class="gs-panel-headline">
+          <h1>Your money,<br/><span class="accent">fully in control.</span></h1>
+          <p>Join 3,800+ people who manage their finances smarter with HooBank. Free to open, no paperwork.</p>
+        </div>
+
+        <!-- Trust cards -->
+        <div class="gs-trust-cards">
+          <div class="gs-trust-card">
+            <div class="gs-trust-icon"><i class="fas fa-shield-halved"></i></div>
+            <div>
+              <span class="gs-trust-title">Bank-Grade Security</span>
+              <span class="gs-trust-sub">256-bit AES encryption on every transaction</span>
+            </div>
+          </div>
+          <div class="gs-trust-card">
+            <div class="gs-trust-icon"><i class="fas fa-bolt"></i></div>
+            <div>
+              <span class="gs-trust-title">Set Up in 2 Minutes</span>
+              <span class="gs-trust-sub">No branch visit, no paperwork, instant access</span>
+            </div>
+          </div>
+          <div class="gs-trust-card">
+            <div class="gs-trust-icon gs-trust-icon--yellow"><i class="fas fa-star"></i></div>
+            <div>
+              <span class="gs-trust-title">Rewards from Day One</span>
+              <span class="gs-trust-sub">Earn points on every purchase you make</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini social proof -->
+        <div class="gs-social-proof">
+          <div class="gs-avatars">
+            <span class="gs-av gs-av--1"><i class="fas fa-user"></i></span>
+            <span class="gs-av gs-av--2"><i class="fas fa-user"></i></span>
+            <span class="gs-av gs-av--3"><i class="fas fa-user"></i></span>
+            <span class="gs-av gs-av--4"><i class="fas fa-user"></i></span>
+          </div>
+          <div class="gs-proof-text">
+            <span class="gs-proof-strong">3,800+ active users</span>
+            <span class="gs-proof-sub">Joined in the last 30 days</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Decorative glows -->
+      <div class="gs-panel-glow gs-panel-glow--1"></div>
+      <div class="gs-panel-glow gs-panel-glow--2"></div>
+    </aside>
+
+    <!-- ── RIGHT PANEL (wizard) ── -->
+    <section class="gs-wizard-wrap">
+      <div class="gs-wizard">
+
+        <!-- ── STEP INDICATOR ── -->
+        <div class="gs-steps">
+          <div class="gs-step gs-step--active" data-step="1">
+            <div class="gs-step-circle">
+              <span class="gs-step-num">1</span>
+              <i class="fas fa-check gs-step-check"></i>
+            </div>
+            <span class="gs-step-label">Your Info</span>
+          </div>
+          <div class="gs-step-line"></div>
+          <div class="gs-step" data-step="2">
+            <div class="gs-step-circle">
+              <span class="gs-step-num">2</span>
+              <i class="fas fa-check gs-step-check"></i>
+            </div>
+            <span class="gs-step-label">Security</span>
+          </div>
+          <div class="gs-step-line"></div>
+          <div class="gs-step" data-step="3">
+            <div class="gs-step-circle">
+              <span class="gs-step-num">3</span>
+              <i class="fas fa-check gs-step-check"></i>
+            </div>
+            <span class="gs-step-label">Confirm</span>
+          </div>
+        </div>
+
+        <!-- ════════════════════════════════
+             STEP 1 – Personal Details
+        ════════════════════════════════ -->
+        <div class="gs-form-step" id="step-1">
+          <div class="gs-form-header">
+            <h2>Create your account</h2>
+            <p>Tell us a little about yourself to get started.</p>
+          </div>
+
+          <div class="gs-field-row">
+            <div class="gs-field">
+              <label for="fname">First Name</label>
+              <div class="gs-input-wrap">
+                <i class="fas fa-user"></i>
+                <input type="text" id="fname" placeholder="John" autocomplete="given-name"/>
+              </div>
+              <span class="gs-error" id="err-fname"></span>
+            </div>
+            <div class="gs-field">
+              <label for="lname">Last Name</label>
+              <div class="gs-input-wrap">
+                <i class="fas fa-user"></i>
+                <input type="text" id="lname" placeholder="Doe" autocomplete="family-name"/>
+              </div>
+              <span class="gs-error" id="err-lname"></span>
+            </div>
+          </div>
+
+          <div class="gs-field">
+            <label for="email">Email Address</label>
+            <div class="gs-input-wrap">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" placeholder="john@example.com" autocomplete="email"/>
+            </div>
+            <span class="gs-error" id="err-email"></span>
+          </div>
+
+          <div class="gs-field">
+            <label for="phone">Phone Number</label>
+            <div class="gs-input-wrap">
+              <i class="fas fa-phone"></i>
+              <input type="tel" id="phone" placeholder="+1 (555) 000-0000" autocomplete="tel"/>
+            </div>
+            <span class="gs-error" id="err-phone"></span>
+          </div>
+
+          <div class="gs-field">
+            <label for="dob">Date of Birth</label>
+            <div class="gs-input-wrap">
+              <i class="fas fa-calendar"></i>
+              <input type="date" id="dob" autocomplete="bday"/>
+            </div>
+            <span class="gs-error" id="err-dob"></span>
+          </div>
+
+          <button class="gs-btn-next" onclick="goToStep(2)">
+            Continue <i class="fas fa-arrow-right"></i>
+          </button>
+
+          <p class="gs-signin-link">Already have an account? <a href="#">Sign in</a></p>
+        </div>
+
+        <!-- ════════════════════════════════
+             STEP 2 – Security Setup
+        ════════════════════════════════ -->
+        <div class="gs-form-step gs-form-step--hidden" id="step-2">
+          <div class="gs-form-header">
+            <h2>Secure your account</h2>
+            <p>Choose a strong password and set up two-factor authentication.</p>
+          </div>
+
+          <div class="gs-field">
+            <label for="password">Password</label>
+            <div class="gs-input-wrap">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" placeholder="Create a strong password"/>
+              <button class="gs-toggle-pw" type="button" onclick="togglePassword('password', this)" tabindex="-1">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <span class="gs-error" id="err-password"></span>
+
+            <!-- Password strength meter -->
+            <div class="gs-strength">
+              <div class="gs-strength-bars">
+                <span class="gs-sbar" id="sbar-1"></span>
+                <span class="gs-sbar" id="sbar-2"></span>
+                <span class="gs-sbar" id="sbar-3"></span>
+                <span class="gs-sbar" id="sbar-4"></span>
+              </div>
+              <span class="gs-strength-label" id="strength-label">Enter a password</span>
+            </div>
+          </div>
+
+          <div class="gs-field">
+            <label for="confirm-password">Confirm Password</label>
+            <div class="gs-input-wrap">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="confirm-password" placeholder="Re-enter your password"/>
+              <button class="gs-toggle-pw" type="button" onclick="togglePassword('confirm-password', this)" tabindex="-1">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <span class="gs-error" id="err-confirm-password"></span>
+          </div>
+
+          <!-- 2FA toggle -->
+          <div class="gs-2fa-card">
+            <div class="gs-2fa-left">
+              <div class="gs-2fa-icon"><i class="fas fa-mobile-screen"></i></div>
+              <div>
+                <span class="gs-2fa-title">Two-Factor Authentication</span>
+                <span class="gs-2fa-sub">Adds an extra layer of protection to your account</span>
+              </div>
+            </div>
+            <label class="gs-toggle">
+              <input type="checkbox" id="tfa-toggle" checked/>
+              <span class="gs-toggle-slider"></span>
+            </label>
+          </div>
+
+          <!-- Password tips -->
+          <div class="gs-pw-tips">
+            <span class="gs-pw-tip" id="tip-len"><i class="fas fa-circle"></i> At least 8 characters</span>
+            <span class="gs-pw-tip" id="tip-upper"><i class="fas fa-circle"></i> One uppercase letter</span>
+            <span class="gs-pw-tip" id="tip-num"><i class="fas fa-circle"></i> One number</span>
+            <span class="gs-pw-tip" id="tip-special"><i class="fas fa-circle"></i> One special character</span>
+          </div>
+
+          <div class="gs-btn-row">
+            <button class="gs-btn-back" onclick="goToStep(1)">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="gs-btn-next" onclick="goToStep(3)">
+              Continue <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ════════════════════════════════
+             STEP 3 – Review & Confirm
+        ════════════════════════════════ -->
+        <div class="gs-form-step gs-form-step--hidden" id="step-3">
+          <div class="gs-form-header">
+            <h2>Review &amp; confirm</h2>
+            <p>Double-check your details before opening your account.</p>
+          </div>
+
+          <!-- Summary card -->
+          <div class="gs-summary-card">
+            <div class="gs-summary-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="gs-summary-rows">
+              <div class="gs-summary-row">
+                <span class="gs-summary-key">Full Name</span>
+                <span class="gs-summary-val" id="sum-name">—</span>
+              </div>
+              <div class="gs-summary-row">
+                <span class="gs-summary-key">Email</span>
+                <span class="gs-summary-val" id="sum-email">—</span>
+              </div>
+              <div class="gs-summary-row">
+                <span class="gs-summary-key">Phone</span>
+                <span class="gs-summary-val" id="sum-phone">—</span>
+              </div>
+              <div class="gs-summary-row">
+                <span class="gs-summary-key">Date of Birth</span>
+                <span class="gs-summary-val" id="sum-dob">—</span>
+              </div>
+              <div class="gs-summary-row">
+                <span class="gs-summary-key">2FA Enabled</span>
+                <span class="gs-summary-val gs-summary-val--accent" id="sum-2fa">Yes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Perks reminder -->
+          <div class="gs-perks">
+            <div class="gs-perk">
+              <i class="fas fa-check-circle"></i>
+              <span>Free account — no monthly fees</span>
+            </div>
+            <div class="gs-perk">
+              <i class="fas fa-check-circle"></i>
+              <span>Instant virtual card issued on signup</span>
+            </div>
+            <div class="gs-perk">
+              <i class="fas fa-check-circle"></i>
+              <span>Rewards points activate immediately</span>
+            </div>
+          </div>
+
+          <!-- Terms -->
+          <label class="gs-checkbox-wrap">
+            <input type="checkbox" id="agree-terms"/>
+            <span class="gs-checkmark"></span>
+            <span class="gs-checkbox-label">
+              I agree to HooBank's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+            </span>
+          </label>
+          <span class="gs-error" id="err-terms"></span>
+
+          <div class="gs-btn-row">
+            <button class="gs-btn-back" onclick="goToStep(2)">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="gs-btn-submit" id="btn-submit" onclick="submitForm()">
+              Open My Account <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ════════════════════════════════
+             SUCCESS STATE
+        ════════════════════════════════ -->
+        <div class="gs-form-step gs-form-step--hidden gs-success" id="step-success">
+          <div class="gs-success-icon">
+            <i class="fas fa-circle-check"></i>
+          </div>
+          <h2 class="gs-success-title">You're all set!</h2>
+          <p class="gs-success-desc">
+            Welcome to HooBank, <strong id="success-name">there</strong>! Your account is being activated.
+            Check your email for a verification link.
+          </p>
+          <div class="gs-success-next">
+            <div class="gs-next-item">
+              <div class="gs-next-num">1</div>
+              <span>Verify your email address</span>
+            </div>
+            <div class="gs-next-item">
+              <div class="gs-next-num">2</div>
+              <span>Download the HooBank app</span>
+            </div>
+            <div class="gs-next-item">
+              <div class="gs-next-num">3</div>
+              <span>Make your first deposit &amp; start earning rewards</span>
+            </div>
+          </div>
+          <div class="gs-success-actions">
+            <a href="#" class="gs-btn-next">Go to Dashboard <i class="fas fa-arrow-right"></i></a>
+            <a href="index.html" class="gs-btn-back">Back to Home</a>
+          </div>
+        </div>
+
+      </div><!-- /.gs-wizard -->
+    </section>
+
+  </main><!-- /.gs-main -->
+
+  <!-- ============================================================
+       JAVASCRIPT – wizard logic
+  ============================================================ -->
+  <script>
+    let currentStep = 1;
+
+    /* ── Navigation ── */
+    function goToStep(target) {
+      if (target > currentStep && !validateStep(currentStep)) return;
+
+      // Hide current, show target
+      document.getElementById('step-' + currentStep).classList.add('gs-form-step--hidden');
+      document.getElementById('step-' + currentStep).classList.remove('gs-form-step--visible');
+
+      const nextEl = document.getElementById('step-' + target);
+      nextEl.classList.remove('gs-form-step--hidden');
+      setTimeout(() => nextEl.classList.add('gs-form-step--visible'), 10);
+
+      // Update step indicators
+      updateStepIndicator(currentStep, target);
+
+      if (target === 3) populateSummary();
+      currentStep = target;
+
+      // Scroll wizard to top
+      document.querySelector('.gs-wizard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function updateStepIndicator(from, to) {
+      const steps = document.querySelectorAll('.gs-step');
+      const lines = document.querySelectorAll('.gs-step-line');
+
+      steps.forEach(s => {
+        const n = parseInt(s.dataset.step);
+        s.classList.remove('gs-step--active', 'gs-step--done');
+        if (n === to)      s.classList.add('gs-step--active');
+        else if (n < to)   s.classList.add('gs-step--done');
+      });
+
+      lines.forEach((l, i) => {
+        l.classList.toggle('gs-step-line--done', (i + 1) < to);
+      });
+    }
+
+    /* ── Validation ── */
+    function validateStep(step) {
+      clearErrors();
+      let valid = true;
+
+      if (step === 1) {
+        if (!val('fname'))    { showErr('fname',  'First name is required'); valid = false; }
+        if (!val('lname'))    { showErr('lname',  'Last name is required');  valid = false; }
+        if (!validEmail())    { showErr('email',  'Enter a valid email address'); valid = false; }
+        if (!val('phone'))    { showErr('phone',  'Phone number is required'); valid = false; }
+        if (!val('dob'))      { showErr('dob',    'Date of birth is required'); valid = false; }
+      }
+
+      if (step === 2) {
+        const pw  = document.getElementById('password').value.trim();
+        const cpw = document.getElementById('confirm-password').value.trim();
+        if (pw.length < 8)   { showErr('password', 'Password must be at least 8 characters'); valid = false; }
+        if (pw !== cpw)      { showErr('confirm-password', 'Passwords do not match'); valid = false; }
+      }
+
+      return valid;
+    }
+
+    function val(id) { return document.getElementById(id).value.trim() !== ''; }
+
+    function validEmail() {
+      const v = document.getElementById('email').value.trim();
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    }
+
+    function showErr(id, msg) {
+      const el = document.getElementById('err-' + id);
+      if (el) { el.textContent = msg; el.style.display = 'block'; }
+      const inp = document.getElementById(id);
+      if (inp) inp.closest('.gs-input-wrap').classList.add('gs-input-wrap--error');
+    }
+
+    function clearErrors() {
+      document.querySelectorAll('.gs-error').forEach(e => {
+        e.textContent = '';
+        e.style.display = 'none';
+      });
+      document.querySelectorAll('.gs-input-wrap').forEach(w => {
+        w.classList.remove('gs-input-wrap--error');
+      });
+    }
+
+    /* ── Summary ── */
+    function populateSummary() {
+      const fname = document.getElementById('fname').value.trim();
+      const lname = document.getElementById('lname').value.trim();
+      document.getElementById('sum-name').textContent  = fname + ' ' + lname || '—';
+      document.getElementById('sum-email').textContent = document.getElementById('email').value.trim() || '—';
+      document.getElementById('sum-phone').textContent = document.getElementById('phone').value.trim() || '—';
+      const dob = document.getElementById('dob').value;
+      document.getElementById('sum-dob').textContent   = dob ? new Date(dob).toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric'}) : '—';
+      document.getElementById('sum-2fa').textContent   = document.getElementById('tfa-toggle').checked ? 'Enabled ✓' : 'Disabled';
+    }
+
+    /* ── Submit ── */
+    function submitForm() {
+      clearErrors();
+      const agreed = document.getElementById('agree-terms').checked;
+      if (!agreed) {
+        const el = document.getElementById('err-terms');
+        el.textContent = 'You must agree to the terms to continue';
+        el.style.display = 'block';
+        return;
+      }
+
+      const btn = document.getElementById('btn-submit');
+      btn.classList.add('gs-btn-loading');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="gs-spinner"></span> Creating account…';
+
+      setTimeout(() => {
+        const fname = document.getElementById('fname').value.trim();
+        document.getElementById('success-name').textContent = fname || 'there';
+
+        document.getElementById('step-3').classList.add('gs-form-step--hidden');
+        document.getElementById('step-3').classList.remove('gs-form-step--visible');
+
+        // Mark all steps done
+        document.querySelectorAll('.gs-step').forEach(s => {
+          s.classList.remove('gs-step--active');
+          s.classList.add('gs-step--done');
+        });
+        document.querySelectorAll('.gs-step-line').forEach(l => l.classList.add('gs-step-line--done'));
+
+        const successEl = document.getElementById('step-success');
+        successEl.classList.remove('gs-form-step--hidden');
+        setTimeout(() => successEl.classList.add('gs-form-step--visible'), 10);
+      }, 1800);
+    }
+
+    /* ── Password toggle ── */
+    function togglePassword(id, btn) {
+      const inp = document.getElementById(id);
+      const icon = btn.querySelector('i');
+      if (inp.type === 'password') {
+        inp.type = 'text';
+        icon.classList.replace('fa-eye', 'fa-eye-slash');
+      } else {
+        inp.type = 'password';
+        icon.classList.replace('fa-eye-slash', 'fa-eye');
+      }
+    }
+
+    /* ── Password strength ── */
+    document.addEventListener('DOMContentLoaded', () => {
+      const pwInput = document.getElementById('password');
+      if (!pwInput) return;
+
+      pwInput.addEventListener('input', function() {
+        const v = this.value;
+        let score = 0;
+        const hasLen     = v.length >= 8;
+        const hasUpper   = /[A-Z]/.test(v);
+        const hasNum     = /[0-9]/.test(v);
+        const hasSpecial = /[^A-Za-z0-9]/.test(v);
+
+        if (hasLen)     score++;
+        if (hasUpper)   score++;
+        if (hasNum)     score++;
+        if (hasSpecial) score++;
+
+        // Update bars
+        const barColors = ['#ff5a5a','#ffc800','#00d4d8','#4cde80'];
+        const labels    = ['Weak','Fair','Good','Strong'];
+        for (let i = 1; i <= 4; i++) {
+          const bar = document.getElementById('sbar-' + i);
+          bar.style.background = i <= score ? barColors[score - 1] : 'var(--white-10)';
+        }
+        document.getElementById('strength-label').textContent = score > 0 ? labels[score - 1] : 'Enter a password';
+        document.getElementById('strength-label').style.color = score > 0 ? barColors[score - 1] : 'var(--grey)';
+
+        // Tips
+        tipState('tip-len',     hasLen);
+        tipState('tip-upper',   hasUpper);
+        tipState('tip-num',     hasNum);
+        tipState('tip-special', hasSpecial);
+      });
+
+      // Remove input errors on typing
+      document.querySelectorAll('.gs-input-wrap input').forEach(inp => {
+        inp.addEventListener('input', function() {
+          this.closest('.gs-input-wrap').classList.remove('gs-input-wrap--error');
+          const errEl = document.getElementById('err-' + this.id);
+          if (errEl) { errEl.textContent = ''; errEl.style.display = 'none'; }
+        });
+      });
+    });
+
+    function tipState(id, pass) {
+      const el = document.getElementById(id);
+      el.classList.toggle('gs-pw-tip--pass', pass);
+    }
+
+    // Show first step with entrance animation
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const s1 = document.getElementById('step-1');
+        s1.classList.add('gs-form-step--visible');
+      }, 50);
+    });
+  </script>
+
+</body>
+</html>
