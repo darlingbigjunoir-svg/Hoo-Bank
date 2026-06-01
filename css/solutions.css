@@ -1,0 +1,774 @@
+/* =============================================================
+   solution.css  –  HooBank Solutions Page
+   Matches the dark fintech aesthetic from style.css
+   ============================================================= */
+
+/* ─── CSS Variables (mirrors home page palette) ─────────────── */
+:root {
+  --col-bg:          #00040f;
+  --col-bg-card:     #0d1b30;
+  --col-bg-card2:    #112240;
+  --col-cyan:        #00f6ff;
+  --col-cyan-dim:    rgba(0, 246, 255, 0.15);
+  --col-white:       #ffffff;
+  --col-grey:        #aab2c0;
+  --col-border:      rgba(255,255,255,0.08);
+  --col-gradient:    linear-gradient(135deg, #00f6ff 0%, #00c6ff 100%);
+  --font:            'Inter', sans-serif;
+  --radius-sm:       8px;
+  --radius-md:       14px;
+  --radius-lg:       20px;
+  --transition:      0.25s ease;
+}
+
+/* ─── Reset / Base ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--col-bg);
+  color: var(--col-white);
+  font-family: var(--font);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+
+/* ─── Navbar (shared with home) ─────────────────────────────── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 4, 15, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--col-border);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.logo-icon { color: var(--col-cyan); font-size: 1.4rem; }
+.logo-text  { color: var(--col-white); }
+
+.nav-links { display: flex; gap: 2.5rem; }
+
+.nav-link {
+  font-size: 0.95rem;
+  color: var(--col-grey);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav-link:hover { color: var(--col-white); }
+
+.nav-link.active {
+  color: var(--col-white);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--col-gradient);
+  border-radius: 2px;
+}
+
+/* ─── Shared Utilities ───────────────────────────────────────── */
+.sol-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sol-gradient-text {
+  background: var(--col-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sol-btn-primary {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: var(--col-gradient);
+  color: var(--col-bg);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--radius-sm);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.sol-btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
+
+/* ─── BUSINESS SECTION ───────────────────────────────────────── */
+.sol-business {
+  padding: 100px 0 80px;
+}
+
+.sol-business__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.sol-business__heading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.sol-business__desc {
+  color: var(--col-grey);
+  font-size: 0.95rem;
+  max-width: 420px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+/* Feature cards (right column) */
+.sol-business__right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sol-feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.4rem 1.5rem;
+  border-radius: var(--radius-md);
+  transition: transform var(--transition);
+}
+
+.sol-feature-card:hover { transform: translateX(6px); }
+
+.sol-feature-card--highlight {
+  background: transparent;
+}
+
+.sol-feature-card--dark {
+  background: var(--col-bg-card);
+  border: 1px solid var(--col-border);
+}
+
+.sol-feature-card__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.sol-icon--star    { background: rgba(255, 200, 0, 0.15); color: #ffc800; }
+.sol-icon--shield  { background: var(--col-cyan-dim);      color: var(--col-cyan); }
+.sol-icon--transfer{ background: rgba(100, 100, 255, 0.15); color: #8080ff; }
+
+.sol-feature-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--col-white);
+}
+
+.sol-feature-card__text {
+  font-size: 0.85rem;
+  color: var(--col-grey);
+  line-height: 1.6;
+}
+
+/* ─── BILLING SECTION ────────────────────────────────────────── */
+.sol-billing {
+  padding: 80px 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,246,255,0.03) 50%, transparent 100%);
+}
+
+.sol-billing__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Billing mock card */
+.sol-billing-card {
+  background: var(--col-bg-card);
+  border: 1px solid var(--col-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  max-width: 380px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,246,255,0.05);
+  position: relative;
+}
+
+.sol-bc__paypal-row {
+  background: var(--col-bg-card2);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.sol-bc__paypal-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.sol-bc__paypal-logo i { color: #009cde; font-size: 1.2rem; }
+
+.sol-bc__checked { color: #1da462; margin-left: auto; font-size: 1rem; }
+
+.sol-bc__balance-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sol-bc__label { font-size: 0.78rem; color: var(--col-grey); }
+
+.sol-bc__balance-val {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.sol-bc__change-btn {
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: var(--col-grey);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: background var(--transition);
+}
+
+.sol-bc__change-btn:hover { background: rgba(255,255,255,0.15); }
+
+.sol-bc__pay-btn {
+  width: 100%;
+  padding: 0.65rem;
+  background: var(--col-gradient);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--col-bg);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: opacity var(--transition);
+}
+
+.sol-bc__pay-btn:hover { opacity: 0.85; }
+
+/* Transactions list */
+.sol-bc__tx-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--col-grey);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sol-bc__tx-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.sol-bc__tx-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.sol-avatar--pink  { background: rgba(255,80,150,0.2); color: #ff5096; }
+.sol-avatar--red   { background: rgba(255,50,50,0.2);  color: #e50914; }
+.sol-avatar--blue  { background: rgba(0,160,255,0.2);  color: #00a0ff; }
+
+.sol-bc__tx-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sol-bc__tx-name { font-size: 0.88rem; font-weight: 500; }
+.sol-bc__tx-time { font-size: 0.75rem; color: var(--col-grey); }
+
+.sol-bc__tx-amount { font-size: 0.88rem; font-weight: 600; }
+.sol-amount--neg { color: #ff4d6d; }
+.sol-amount--pos { color: #1da462; }
+
+/* Success badge */
+.sol-bc__success {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  background: rgba(29,164,98,0.1);
+  border: 1px solid rgba(29,164,98,0.25);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  color: #1da462;
+}
+
+/* Right text */
+.sol-billing__heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.sol-billing__desc {
+  color: var(--col-grey);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+.sol-store-badges { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.sol-store-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--col-bg-card);
+  border: 1px solid var(--col-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.sol-store-badge:hover {
+  border-color: var(--col-cyan);
+  transform: translateY(-2px);
+}
+
+.sol-store-badge > i { font-size: 1.6rem; color: var(--col-white); }
+
+.sol-store-badge__sub  { display: block; font-size: 0.65rem; color: var(--col-grey); }
+.sol-store-badge__name { display: block; font-size: 0.9rem;  font-weight: 700; }
+
+/* ─── CARD DEAL SECTION ──────────────────────────────────────── */
+.sol-carddeal {
+  padding: 80px 0;
+}
+
+.sol-carddeal__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.sol-carddeal__heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.sol-carddeal__desc {
+  color: var(--col-grey);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+/* Analysis card */
+.sol-analysis-card {
+  background: var(--col-bg-card);
+  border: 1px solid var(--col-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  max-width: 380px;
+  margin-left: auto;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+}
+
+.sol-ac__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.sol-ac__title { font-weight: 600; font-size: 0.9rem; color: var(--col-grey); }
+
+.sol-ac__amounts { display: flex; gap: 1rem; }
+
+.sol-ac__val { font-size: 0.85rem; font-weight: 700; }
+.sol-ac__val--pos { color: #1da462; }
+.sol-ac__val--neg { color: #ff4d6d; }
+
+/* Bar chart mock */
+.sol-ac__chart {
+  background: var(--col-bg-card2);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  height: 90px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sol-ac__bar-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+}
+
+.sol-ac__bar {
+  flex: 1;
+  background: rgba(255,255,255,0.12);
+  border-radius: 3px 3px 0 0;
+  transition: height 0.4s ease;
+}
+
+.sol-ac__bar--cyan { background: var(--col-cyan); opacity: 0.75; }
+
+/* Scan row */
+.sol-ac__scan-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--col-bg-card2);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.sol-ac__scan-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--col-cyan-dim);
+  color: var(--col-cyan);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.sol-ac__scan-title { font-size: 0.88rem; font-weight: 600; }
+.sol-ac__scan-sub   { font-size: 0.75rem; color: var(--col-grey); }
+
+/* Pay method row */
+.sol-ac__pay-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--col-bg-card2);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+}
+
+.sol-ac__pay-label { font-size: 0.85rem; color: var(--col-grey); }
+
+.sol-ac__pay-icons { display: flex; gap: 0.5rem; }
+
+.sol-pay-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--col-white);
+  transition: background var(--transition);
+}
+
+.sol-pay-icon:hover { background: var(--col-cyan-dim); color: var(--col-cyan); }
+
+/* ─── TESTIMONIALS ───────────────────────────────────────────── */
+.sol-testimonials {
+  padding: 80px 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,246,255,0.025) 50%, transparent 100%);
+}
+
+.sol-testimonials__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.sol-testimonials__heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.sol-testimonials__sub {
+  color: var(--col-grey);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.sol-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Testimonial card */
+.sol-tcard {
+  background: var(--col-bg-card);
+  border: 1px solid var(--col-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.sol-tcard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0,246,255,0.3);
+}
+
+.sol-tcard--active {
+  border-color: rgba(0,246,255,0.35);
+}
+
+.sol-tcard__quote {
+  color: var(--col-cyan);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.sol-tcard__text {
+  color: var(--col-grey);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.sol-tcard__author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sol-tcard__avatar {
+  font-size: 2.2rem;
+  color: var(--col-grey);
+  line-height: 1;
+}
+
+.sol-tcard__name { font-size: 0.9rem; font-weight: 600; color: var(--col-white); }
+.sol-tcard__role { font-size: 0.78rem; color: var(--col-grey); }
+
+/* ─── PARTNERS ───────────────────────────────────────────────── */
+.sol-partners { padding: 60px 0; border-top: 1px solid var(--col-border); border-bottom: 1px solid var(--col-border); }
+
+.sol-partners__inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.sol-partner-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.35);
+  transition: color var(--transition);
+}
+
+.sol-partner-logo:hover { color: rgba(255,255,255,0.75); }
+
+.sol-partner-logo i { font-size: 1.8rem; }
+
+/* ─── CTA BANNER ─────────────────────────────────────────────── */
+.sol-cta {
+  padding: 60px 0;
+}
+
+.sol-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: var(--col-bg-card);
+  border: 1px solid var(--col-border);
+  border-radius: var(--radius-lg);
+  padding: 3rem 3.5rem;
+  flex-wrap: wrap;
+}
+
+.sol-cta__heading {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+.sol-cta__sub {
+  color: var(--col-grey);
+  font-size: 0.9rem;
+  max-width: 420px;
+  line-height: 1.7;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.sol-footer {
+  padding: 60px 0 0;
+  border-top: 1px solid var(--col-border);
+}
+
+.sol-footer__top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.sol-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.sol-footer__brand-desc {
+  color: var(--col-grey);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  max-width: 260px;
+}
+
+.sol-footer__col-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--col-white);
+  margin-bottom: 1.25rem;
+  text-transform: capitalize;
+}
+
+.sol-footer__list li { margin-bottom: 0.7rem; }
+
+.sol-footer__list a {
+  color: var(--col-grey);
+  font-size: 0.88rem;
+  transition: color var(--transition);
+}
+
+.sol-footer__list a:hover { color: var(--col-cyan); }
+
+.sol-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--col-border);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sol-footer__copy { color: var(--col-grey); font-size: 0.83rem; }
+
+.sol-footer__socials { display: flex; gap: 1rem; }
+
+.sol-social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: var(--col-grey);
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.sol-social-icon:hover {
+  background: var(--col-cyan-dim);
+  color: var(--col-cyan);
+  transform: translateY(-2px);
+}
+
+/* ─── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .sol-business__inner,
+  .sol-billing__inner,
+  .sol-carddeal__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .sol-carddeal__inner { direction: initial; }
+  .sol-analysis-card   { margin-left: 0; }
+
+  .sol-testimonials__header { grid-template-columns: 1fr; gap: 1rem; }
+  .sol-testimonials__grid   { grid-template-columns: 1fr; }
+
+  .sol-footer__top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .sol-container { padding: 0 1.25rem; }
+
+  .nav-links { gap: 1.25rem; }
+
+  .sol-cta__inner { padding: 2rem 1.5rem; }
+
+  .sol-footer__top { grid-template-columns: 1fr; }
+
+  .sol-footer__bottom { flex-direction: column; align-items: flex-start; }
+
+  .sol-partners__inner { justify-content: flex-start; gap: 1.5rem 2.5rem; }
+}

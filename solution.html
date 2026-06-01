@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HooBank – The Next Generation Payment Method</title>
+  <title>HooBank – Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/solutions.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -17,15 +18,427 @@
   ============================================================ -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <span class="logo-icon"><i class="fas fa-circle-notch"></i></span>
         <span class="logo-text">HooBank</span>
       </a>
       <nav class="nav-links">
-        <a href="index.html" class="nav-link ">Home</a>
+        <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
         <a href="features.html" class="nav-link">Features</a>
         <a href="solution.html" class="nav-link active">Solution</a>
       </nav>
     </div>
   </header>
+
+  <!-- ============================================================
+       HERO / BUSINESS SECTION
+  ============================================================ -->
+  <section class="sol-business">
+    <div class="sol-container sol-business__inner">
+
+      <!-- Left -->
+      <div class="sol-business__left">
+        <h2 class="sol-business__heading">
+          You do the business,<br/>
+          <span class="sol-gradient-text">we'll handle the money.</span>
+        </h2>
+        <p class="sol-business__desc">
+          With the right credit card, you can improve your financial life
+          by building credit, earning rewards and saving money. But with
+          hundreds of credit cards on the market.
+        </p>
+        <a href="#" class="sol-btn-primary">Get Started</a>
+      </div>
+
+      <!-- Right – feature cards -->
+      <div class="sol-business__right">
+
+        <div class="sol-feature-card sol-feature-card--highlight">
+          <div class="sol-feature-card__icon sol-icon--star">
+            <i class="fas fa-star"></i>
+          </div>
+          <div>
+            <h4 class="sol-feature-card__title">Rewards</h4>
+            <p class="sol-feature-card__text">
+              The best credit cards offer some tantalizing combinations of promotions and prizes.
+            </p>
+          </div>
+        </div>
+
+        <div class="sol-feature-card sol-feature-card--dark">
+          <div class="sol-feature-card__icon sol-icon--shield">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <div>
+            <h4 class="sol-feature-card__title">100% Secured</h4>
+            <p class="sol-feature-card__text">
+              We take proactive steps make sure your information and transactions are secure.
+            </p>
+          </div>
+        </div>
+
+        <div class="sol-feature-card sol-feature-card--dark">
+          <div class="sol-feature-card__icon sol-icon--transfer">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+          <div>
+            <h4 class="sol-feature-card__title">Balance Transfer</h4>
+            <p class="sol-feature-card__text">
+              A balance transfer credit card can save you a lot of money in interest charges.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BILLING SECTION
+  ============================================================ -->
+  <section class="sol-billing">
+    <div class="sol-container sol-billing__inner">
+
+      <!-- Left – mock UI card -->
+      <div class="sol-billing__left">
+        <div class="sol-billing-card">
+          <!-- Paypal row -->
+          <div class="sol-bc__paypal-row">
+            <div class="sol-bc__paypal-logo">
+              <i class="fab fa-paypal"></i>
+              <span>Paypal</span>
+              <span class="sol-bc__checked"><i class="fas fa-circle-check"></i></span>
+            </div>
+            <div class="sol-bc__balance-row">
+              <span class="sol-bc__label">Balance</span>
+              <div class="sol-bc__balance-val">
+                <span>$230</span>
+                <button class="sol-bc__change-btn">Change</button>
+              </div>
+            </div>
+            <button class="sol-bc__pay-btn">Make Payment</button>
+          </div>
+
+          <!-- Last transactions -->
+          <div class="sol-bc__transactions">
+            <p class="sol-bc__tx-title">Last Transaction</p>
+
+            <div class="sol-bc__tx-item">
+              <div class="sol-bc__tx-avatar sol-avatar--pink">
+                <i class="fas fa-basketball"></i>
+              </div>
+              <div class="sol-bc__tx-info">
+                <span class="sol-bc__tx-name">Dribbble Pro</span>
+                <span class="sol-bc__tx-time">5 days ago</span>
+              </div>
+              <span class="sol-bc__tx-amount sol-amount--neg">- $250.93</span>
+            </div>
+
+            <div class="sol-bc__tx-item">
+              <div class="sol-bc__tx-avatar sol-avatar--red">
+                <i class="fas fa-n"></i>
+              </div>
+              <div class="sol-bc__tx-info">
+                <span class="sol-bc__tx-name">Netflix</span>
+                <span class="sol-bc__tx-time">1 days ago</span>
+              </div>
+              <span class="sol-bc__tx-amount sol-amount--neg">- $250.93</span>
+            </div>
+
+            <div class="sol-bc__tx-item">
+              <div class="sol-bc__tx-avatar sol-avatar--blue">
+                <i class="fas fa-building-columns"></i>
+              </div>
+              <div class="sol-bc__tx-info">
+                <span class="sol-bc__tx-name">Manulife Cash</span>
+                <span class="sol-bc__tx-time">4 days ago</span>
+              </div>
+              <span class="sol-bc__tx-amount sol-amount--neg">- $250.83</span>
+            </div>
+          </div>
+
+          <!-- Success badge -->
+          <div class="sol-bc__success">
+            <i class="fas fa-circle-check"></i>
+            <span>Great! Your Payment is successfully.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right – text -->
+      <div class="sol-billing__right">
+        <h2 class="sol-billing__heading">
+          Easily control your<br/>
+          <span class="sol-gradient-text">billing &amp; invoicing.</span>
+        </h2>
+        <p class="sol-billing__desc">
+          Elit enim sed massa etiam. Mauris eu adipiscing ultrices ametodio aenean neque.
+          Fusce ipsum orci rhoncus aliporttitor integer platea placerat.
+        </p>
+        <div class="sol-store-badges">
+          <a href="#" class="sol-store-badge">
+            <i class="fab fa-apple"></i>
+            <div>
+              <span class="sol-store-badge__sub">Download on the</span>
+              <span class="sol-store-badge__name">App Store</span>
+            </div>
+          </a>
+          <a href="#" class="sol-store-badge">
+            <i class="fab fa-google-play"></i>
+            <div>
+              <span class="sol-store-badge__sub">Get it on</span>
+              <span class="sol-store-badge__name">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CARD DEAL SECTION
+  ============================================================ -->
+  <section class="sol-carddeal">
+    <div class="sol-container sol-carddeal__inner">
+
+      <!-- Left – text -->
+      <div class="sol-carddeal__left">
+        <h2 class="sol-carddeal__heading">
+          Find a better card deal<br/>
+          <span class="sol-gradient-text">in few easy steps.</span>
+        </h2>
+        <p class="sol-carddeal__desc">
+          Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis aliquet eget
+          mauris tortor.ç Aliquet ultrices ac, ametau.
+        </p>
+        <a href="#" class="sol-btn-primary">Get Started</a>
+      </div>
+
+      <!-- Right – analysis mock card -->
+      <div class="sol-carddeal__right">
+        <div class="sol-analysis-card">
+          <div class="sol-ac__header">
+            <span class="sol-ac__title">Online Analysis</span>
+            <div class="sol-ac__amounts">
+              <span class="sol-ac__val sol-ac__val--pos">$1,336.87</span>
+              <span class="sol-ac__val sol-ac__val--neg">$3,509M</span>
+            </div>
+          </div>
+
+          <!-- Chart bars mock -->
+          <div class="sol-ac__chart">
+            <div class="sol-ac__bar-group">
+              <div class="sol-ac__bar" style="height:40%"></div>
+              <div class="sol-ac__bar sol-ac__bar--cyan" style="height:70%"></div>
+              <div class="sol-ac__bar" style="height:55%"></div>
+              <div class="sol-ac__bar sol-ac__bar--cyan" style="height:80%"></div>
+              <div class="sol-ac__bar" style="height:45%"></div>
+              <div class="sol-ac__bar sol-ac__bar--cyan" style="height:65%"></div>
+              <div class="sol-ac__bar" style="height:30%"></div>
+            </div>
+          </div>
+
+          <!-- Scan credit cards row -->
+          <div class="sol-ac__scan-row">
+            <div class="sol-ac__scan-icon"><i class="fas fa-credit-card"></i></div>
+            <div>
+              <p class="sol-ac__scan-title">Scan Credit Cards</p>
+              <p class="sol-ac__scan-sub">Scan your credit card in 4 minutes</p>
+            </div>
+          </div>
+
+          <!-- Pay method row -->
+          <div class="sol-ac__pay-row">
+            <span class="sol-ac__pay-label">Pay Method</span>
+            <div class="sol-ac__pay-icons">
+              <span class="sol-pay-icon"><i class="fab fa-paypal"></i></span>
+              <span class="sol-pay-icon"><i class="fab fa-cc-visa"></i></span>
+              <span class="sol-pay-icon"><i class="fab fa-cc-mastercard"></i></span>
+              <span class="sol-pay-icon"><i class="fab fa-amazon-pay"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section class="sol-testimonials">
+    <div class="sol-container">
+
+      <div class="sol-testimonials__header">
+        <h2 class="sol-testimonials__heading">
+          What people are<br/>saying about us
+        </h2>
+        <p class="sol-testimonials__sub">
+          Everything you need to accept card payments and grow your business
+          anywhere on the planet.
+        </p>
+      </div>
+
+      <div class="sol-testimonials__grid">
+
+        <div class="sol-tcard sol-tcard--active">
+          <div class="sol-tcard__quote"><i class="fas fa-quote-left"></i></div>
+          <p class="sol-tcard__text">
+            Money is only a tool. It will take you wherever you wish, but it will
+            not replace you as the driver.
+          </p>
+          <div class="sol-tcard__author">
+            <div class="sol-tcard__avatar">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div>
+              <p class="sol-tcard__name">Herman Jensen</p>
+              <p class="sol-tcard__role">Founder &amp; Leader</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sol-tcard">
+          <div class="sol-tcard__quote"><i class="fas fa-quote-left"></i></div>
+          <p class="sol-tcard__text">
+            Money makes your life easier. If you're lucky to have it, you're lucky.
+          </p>
+          <div class="sol-tcard__author">
+            <div class="sol-tcard__avatar">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div>
+              <p class="sol-tcard__name">Steve Mark</p>
+              <p class="sol-tcard__role">Founder &amp; Leader</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sol-tcard">
+          <div class="sol-tcard__quote"><i class="fas fa-quote-left"></i></div>
+          <p class="sol-tcard__text">
+            It is usually people in the money business, finance, and international
+            trade that are really rich.
+          </p>
+          <div class="sol-tcard__author">
+            <div class="sol-tcard__avatar">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div>
+              <p class="sol-tcard__name">Kenn Gallagher</p>
+              <p class="sol-tcard__role">Founder &amp; Leader</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PARTNERS / LOGOS
+  ============================================================ -->
+  <section class="sol-partners">
+    <div class="sol-container sol-partners__inner">
+      <div class="sol-partner-logo">
+        <i class="fab fa-airbnb"></i>
+        <span>airbnb</span>
+      </div>
+      <div class="sol-partner-logo">
+        <i class="fas fa-coins"></i>
+        <span>BINANCE</span>
+      </div>
+      <div class="sol-partner-logo">
+        <i class="fas fa-circle-dollar-to-slot"></i>
+        <span>coinbase</span>
+      </div>
+      <div class="sol-partner-logo">
+        <i class="fab fa-dropbox"></i>
+        <span>Dropbox</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BANNER
+  ============================================================ -->
+  <section class="sol-cta">
+    <div class="sol-container sol-cta__inner">
+      <div class="sol-cta__left">
+        <h2 class="sol-cta__heading">Let's try our service now!</h2>
+        <p class="sol-cta__sub">
+          Everything you need to accept card payments and grow your business
+          anywhere on the planet.
+        </p>
+      </div>
+      <a href="#" class="sol-btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="sol-footer">
+    <div class="sol-container sol-footer__top">
+
+      <!-- Brand -->
+      <div class="sol-footer__brand">
+        <a href="index.html" class="nav-logo sol-footer__logo">
+          <span class="logo-icon"><i class="fas fa-circle-notch"></i></span>
+          <span class="logo-text">HooBank</span>
+        </a>
+        <p class="sol-footer__brand-desc">
+          A new way to make the payments easy, reliable and secure.
+        </p>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="sol-footer__col">
+        <h5 class="sol-footer__col-title">Usefull Links</h5>
+        <ul class="sol-footer__list">
+          <li><a href="#">Content</a></li>
+          <li><a href="#">How it Works</a></li>
+          <li><a href="#">Create</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Terms &amp; Services</a></li>
+        </ul>
+      </div>
+
+      <!-- Community -->
+      <div class="sol-footer__col">
+        <h5 class="sol-footer__col-title">Community</h5>
+        <ul class="sol-footer__list">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Suggestions</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Newsletters</a></li>
+        </ul>
+      </div>
+
+      <!-- Partner -->
+      <div class="sol-footer__col">
+        <h5 class="sol-footer__col-title">Partner</h5>
+        <ul class="sol-footer__list">
+          <li><a href="#">Our Partner</a></li>
+          <li><a href="#">Become a Partner</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="sol-footer__bottom">
+      <p class="sol-footer__copy">Copyright &copy; 2021 HooBank. All Rights Reserved.</p>
+      <div class="sol-footer__socials">
+        <a href="#" class="sol-social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="sol-social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="sol-social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="sol-social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
