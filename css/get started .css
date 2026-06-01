@@ -1,0 +1,1047 @@
+/* ============================================================
+   GET STARTED PAGE — gs-body & layout
+============================================================ */
+.gs-body {
+  background: var(--bg-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hide default navbar CTA on this page, show custom one */
+.gs-nav-cta {
+  font-size: 0.85rem;
+  padding: 10px 22px;
+}
+
+/* ── MAIN two-column layout ── */
+.gs-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding-top: 70px; /* navbar height */
+}
+
+/* ============================================================
+   LEFT PANEL — branding / trust
+============================================================ */
+.gs-panel {
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  background: var(--bg-section);
+  border-right: 1px solid var(--white-10);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gs-panel-inner {
+  position: relative;
+  z-index: 2;
+  padding: 48px 52px;
+  width: 100%;
+  max-width: 520px;
+}
+
+/* Panel logo */
+.gs-panel-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.3px;
+  margin-bottom: 44px;
+  text-decoration: none;
+}
+
+/* Headline */
+.gs-panel-headline h1 {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.gs-panel-headline p {
+  font-size: 0.92rem;
+  color: var(--grey);
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+
+/* Trust cards */
+.gs-trust-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.gs-trust-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--white-10);
+  border-radius: var(--radius);
+  transition: border-color var(--transition);
+}
+
+.gs-trust-card:hover {
+  border-color: var(--accent);
+}
+
+.gs-trust-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 212, 216, 0.15);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.gs-trust-icon--yellow {
+  background: rgba(255, 200, 0, 0.12);
+  color: #ffc800;
+}
+
+.gs-trust-title {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.gs-trust-sub {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--grey);
+  line-height: 1.4;
+}
+
+/* Social proof */
+.gs-social-proof {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.gs-avatars {
+  display: flex;
+}
+
+.gs-av {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-section);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-left: -8px;
+  background: var(--bg-card);
+  color: var(--grey);
+}
+
+.gs-av:first-child { margin-left: 0; }
+.gs-av--1 { background: #1a3a5c; color: #4db8ff; }
+.gs-av--2 { background: #1a3a1a; color: #4cde80; }
+.gs-av--3 { background: #3a1a1a; color: #ff7070; }
+.gs-av--4 { background: #2a1a3a; color: #b48aff; }
+
+.gs-proof-strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.gs-proof-sub {
+  display: block;
+  font-size: 0.73rem;
+  color: var(--grey);
+}
+
+/* Decorative glows */
+.gs-panel-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.gs-panel-glow--1 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(0,212,216,0.07) 0%, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  z-index: 1;
+}
+
+.gs-panel-glow--2 {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(130,100,255,0.06) 0%, transparent 70%);
+  top: 20px;
+  left: -60px;
+  z-index: 1;
+}
+
+/* ============================================================
+   RIGHT PANEL — wizard
+============================================================ */
+.gs-wizard-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 40px;
+  background: var(--bg-dark);
+  min-height: 100%;
+}
+
+.gs-wizard {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* ============================================================
+   STEP INDICATOR
+============================================================ */
+.gs-steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 48px;
+}
+
+.gs-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.gs-step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--white-30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--grey);
+  background: var(--bg-dark);
+  transition: border-color var(--transition), background var(--transition), color var(--transition);
+  position: relative;
+}
+
+.gs-step-check {
+  display: none;
+  font-size: 0.85rem;
+}
+
+.gs-step-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--grey);
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+/* Active step */
+.gs-step--active .gs-step-circle {
+  border-color: var(--accent);
+  background: rgba(0, 212, 216, 0.1);
+  color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(0, 212, 216, 0.1);
+}
+
+.gs-step--active .gs-step-label {
+  color: var(--white);
+}
+
+/* Done step */
+.gs-step--done .gs-step-circle {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #000;
+}
+
+.gs-step--done .gs-step-num {
+  display: none;
+}
+
+.gs-step--done .gs-step-check {
+  display: block;
+  color: #000;
+}
+
+.gs-step--done .gs-step-label {
+  color: var(--accent);
+}
+
+/* Connector lines */
+.gs-step-line {
+  flex: 1;
+  height: 2px;
+  background: var(--white-10);
+  margin-bottom: 26px; /* aligns with circles */
+  transition: background 0.4s ease;
+}
+
+.gs-step-line--done {
+  background: var(--accent);
+}
+
+/* ============================================================
+   FORM STEPS — animation
+============================================================ */
+.gs-form-step {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.gs-form-step--hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.gs-form-step--visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   FORM HEADER
+============================================================ */
+.gs-form-header {
+  margin-bottom: 32px;
+}
+
+.gs-form-header h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+
+.gs-form-header p {
+  font-size: 0.9rem;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   FIELDS & INPUTS
+============================================================ */
+.gs-field {
+  margin-bottom: 20px;
+}
+
+.gs-field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--white-80);
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.gs-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.gs-input-wrap > i {
+  position: absolute;
+  left: 14px;
+  color: var(--grey);
+  font-size: 0.88rem;
+  pointer-events: none;
+  transition: color var(--transition);
+  z-index: 1;
+}
+
+.gs-input-wrap input {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1.5px solid var(--white-10);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px 12px 40px;
+  font-size: 0.9rem;
+  font-family: var(--font);
+  color: var(--white);
+  outline: none;
+  transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+  -webkit-appearance: none;
+}
+
+.gs-input-wrap input::placeholder {
+  color: var(--grey);
+  opacity: 0.7;
+}
+
+.gs-input-wrap input:focus {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+  box-shadow: 0 0 0 3px rgba(0, 212, 216, 0.1);
+}
+
+.gs-input-wrap input:focus + i,
+.gs-input-wrap:focus-within > i {
+  color: var(--accent);
+}
+
+/* Error state */
+.gs-input-wrap--error input {
+  border-color: #ff5a5a;
+  box-shadow: 0 0 0 3px rgba(255, 90, 90, 0.1);
+}
+
+.gs-input-wrap--error > i {
+  color: #ff5a5a;
+}
+
+/* Error text */
+.gs-error {
+  display: none;
+  font-size: 0.75rem;
+  color: #ff5a5a;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* Password toggle button */
+.gs-toggle-pw {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--grey);
+  cursor: pointer;
+  padding: 4px;
+  font-size: 0.9rem;
+  transition: color var(--transition);
+  line-height: 1;
+}
+
+.gs-toggle-pw:hover { color: var(--white); }
+
+/* Password input with toggle needs right padding */
+.gs-input-wrap:has(.gs-toggle-pw) input {
+  padding-right: 42px;
+}
+
+/* Two-column row */
+.gs-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Date input color fix */
+.gs-input-wrap input[type="date"] {
+  color-scheme: dark;
+}
+
+/* ============================================================
+   PASSWORD STRENGTH METER
+============================================================ */
+.gs-strength {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.gs-strength-bars {
+  display: flex;
+  gap: 4px;
+}
+
+.gs-sbar {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--white-10);
+  transition: background 0.3s ease;
+}
+
+.gs-strength-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--grey);
+  transition: color 0.3s ease;
+}
+
+/* Password tips */
+.gs-pw-tips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.gs-pw-tip {
+  font-size: 0.75rem;
+  color: var(--grey);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.25s ease;
+}
+
+.gs-pw-tip i {
+  font-size: 0.5rem;
+}
+
+.gs-pw-tip--pass {
+  color: #4cde80;
+}
+
+.gs-pw-tip--pass i {
+  color: #4cde80;
+}
+
+/* ============================================================
+   2FA CARD
+============================================================ */
+.gs-2fa-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--white-10);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  transition: border-color var(--transition);
+}
+
+.gs-2fa-card:hover {
+  border-color: var(--white-30);
+}
+
+.gs-2fa-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gs-2fa-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 212, 216, 0.12);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.gs-2fa-title {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.gs-2fa-sub {
+  display: block;
+  font-size: 0.73rem;
+  color: var(--grey);
+  line-height: 1.4;
+}
+
+/* Toggle switch */
+.gs-toggle {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.gs-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.gs-toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: var(--white-10);
+  border-radius: 26px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.gs-toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 4px;
+  top: 4px;
+  background: var(--white);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.gs-toggle input:checked + .gs-toggle-slider {
+  background: var(--accent);
+}
+
+.gs-toggle input:checked + .gs-toggle-slider::before {
+  transform: translateX(20px);
+}
+
+/* ============================================================
+   BUTTONS — next / back / submit
+============================================================ */
+.gs-btn-next {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: var(--accent);
+  color: #000;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  text-decoration: none;
+}
+
+.gs-btn-next:hover {
+  background: var(--accent-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 212, 216, 0.3);
+}
+
+.gs-btn-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--white-80);
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 14px 22px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--white-10);
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+  text-decoration: none;
+}
+
+.gs-btn-back:hover {
+  border-color: var(--white-30);
+  color: var(--white);
+  background: var(--white-10);
+}
+
+.gs-btn-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  background: var(--accent);
+  color: #000;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.gs-btn-submit:hover:not(:disabled) {
+  background: var(--accent-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 212, 216, 0.3);
+}
+
+.gs-btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Loading state */
+.gs-btn-loading {
+  pointer-events: none;
+}
+
+@keyframes gs-spin {
+  to { transform: rotate(360deg); }
+}
+
+.gs-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0,0,0,0.3);
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: gs-spin 0.7s linear infinite;
+}
+
+/* Back + Next row */
+.gs-btn-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Sign in link */
+.gs-signin-link {
+  text-align: center;
+  font-size: 0.83rem;
+  color: var(--grey);
+  margin-top: 16px;
+}
+
+.gs-signin-link a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.gs-signin-link a:hover {
+  color: var(--accent-dim);
+  text-decoration: underline;
+}
+
+/* ============================================================
+   STEP 3 — Summary card
+============================================================ */
+.gs-summary-card {
+  background: var(--bg-card);
+  border: 1px solid var(--white-10);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.gs-summary-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(0, 212, 216, 0.12);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.gs-summary-rows {
+  flex: 1;
+}
+
+.gs-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--white-10);
+}
+
+.gs-summary-row:last-child {
+  border-bottom: none;
+}
+
+.gs-summary-key {
+  font-size: 0.78rem;
+  color: var(--grey);
+  font-weight: 500;
+}
+
+.gs-summary-val {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--white-80);
+  text-align: right;
+  max-width: 60%;
+  word-break: break-word;
+}
+
+.gs-summary-val--accent {
+  color: var(--accent);
+}
+
+/* Perks */
+.gs-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gs-perk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.84rem;
+  color: var(--white-80);
+}
+
+.gs-perk i {
+  color: #4cde80;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+/* Terms checkbox */
+.gs-checkbox-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 0;
+}
+
+.gs-checkbox-wrap input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.gs-checkmark {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid var(--white-30);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.gs-checkbox-wrap input:checked ~ .gs-checkmark {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.gs-checkmark::after {
+  content: '';
+  display: none;
+  width: 4px;
+  height: 8px;
+  border: 2px solid #000;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translateY(-1px);
+}
+
+.gs-checkbox-wrap input:checked ~ .gs-checkmark::after {
+  display: block;
+}
+
+.gs-checkbox-label {
+  font-size: 0.82rem;
+  color: var(--grey);
+  line-height: 1.5;
+}
+
+.gs-checkbox-label a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.gs-checkbox-label a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   SUCCESS STATE
+============================================================ */
+.gs-success {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.gs-success-icon {
+  font-size: 4.5rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+  animation: gs-pop-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes gs-pop-in {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.gs-success-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.gs-success-desc {
+  font-size: 0.93rem;
+  color: var(--grey);
+  line-height: 1.75;
+  margin-bottom: 36px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Next steps */
+.gs-success-next {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+  background: var(--bg-card);
+  border: 1px solid var(--white-10);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 28px;
+}
+
+.gs-next-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.88rem;
+  color: var(--white-80);
+}
+
+.gs-next-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0, 212, 216, 0.12);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.gs-success-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.gs-success-actions .gs-btn-next {
+  width: auto;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 1024px) {
+  .gs-main {
+    grid-template-columns: 1fr;
+  }
+
+  .gs-panel {
+    position: static;
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .gs-panel-inner {
+    padding: 32px 40px;
+  }
+
+  .gs-wizard-wrap {
+    padding: 48px 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gs-panel-inner {
+    padding: 28px 24px;
+  }
+
+  .gs-panel-headline h1 {
+    font-size: 1.7rem;
+  }
+
+  .gs-wizard-wrap {
+    padding: 36px 20px;
+  }
+
+  .gs-field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .gs-btn-row {
+    flex-direction: column-reverse;
+  }
+
+  .gs-btn-back {
+    width: 100%;
+  }
+
+  .gs-success-actions {
+    flex-direction: column;
+  }
+
+  .gs-success-actions .gs-btn-next,
+  .gs-success-actions .gs-btn-back {
+    width: 100%;
+  }
+}
